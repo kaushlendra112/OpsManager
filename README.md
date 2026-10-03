@@ -132,13 +132,6 @@ cd frontend
 npm run build
 ```
 
-Optional lint check:
-
-```bash
-cd frontend
-npm run lint
-```
-
 ## Notes
 
 - The database file is stored locally in the backend folder and is created automatically when the server starts.
