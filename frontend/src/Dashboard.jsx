@@ -100,7 +100,7 @@ export default function Dashboard({ user }) {
                     <select 
                         value={stateFilter} 
                         onChange={e => { setStateFilter(e.target.value); setPage(1); }}
-                        className="pl-10 block w-full md:w-48 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md border"
+                        className="pl-10 block w-full md:w-48 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md border"
                     >
                         <option value="">All States</option>
                         <option value="Open">Open</option>

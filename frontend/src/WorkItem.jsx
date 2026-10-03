@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import api from './api';
-import { ArrowLeft, MessageSquare, Clock, AlertCircle, RefreshCw, Send, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, MessageSquare, Clock, AlertCircle, RefreshCw, Send, CheckCircle2, Plus } from 'lucide-react';
 
 export default function WorkItem({ user }) {
     const { id } = useParams();
@@ -67,7 +67,7 @@ export default function WorkItem({ user }) {
                     </Link>
                     <div className="rounded-md bg-red-50 p-4 border border-red-200">
                         <div className="flex">
-                            <div className="flex-shrink-0">
+                            <div className="shrink-0">
                                 <AlertCircle className="h-5 w-5 text-red-400" aria-hidden="true" />
                             </div>
                             <div className="ml-3">
@@ -97,7 +97,7 @@ export default function WorkItem({ user }) {
             {error && (
                 <div className="rounded-md bg-red-50 p-4 border border-red-200">
                     <div className="flex">
-                        <div className="flex-shrink-0">
+                        <div className="shrink-0">
                             <AlertCircle className="h-5 w-5 text-red-400" aria-hidden="true" />
                         </div>
                         <div className="ml-3 flex-1 flex items-center justify-between">
@@ -144,7 +144,7 @@ export default function WorkItem({ user }) {
                     <dl className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
                         <div className="sm:col-span-1 lg:col-span-3">
                             <dt className="text-sm font-medium text-gray-500">Description</dt>
-                            <dd className="mt-1 text-sm text-gray-900 whitespace-pre-wrap bg-white p-4 rounded border border-gray-200 min-h-[100px]">
+                            <dd className="mt-1 text-sm text-gray-900 whitespace-pre-wrap bg-white p-4 rounded border border-gray-200 min-h-25">
                                 {item.description || <span className="text-gray-400 italic">No description provided.</span>}
                             </dd>
                         </div>
@@ -188,7 +188,7 @@ export default function WorkItem({ user }) {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Comments Section */}
-                <div className="bg-white shadow sm:rounded-lg border border-gray-200 flex flex-col h-[500px]">
+                <div className="bg-white shadow sm:rounded-lg border border-gray-200 flex flex-col h-125">
                     <div className="px-4 py-3 border-b border-gray-200 bg-gray-50 flex items-center">
                         <MessageSquare className="w-5 h-5 text-gray-500 mr-2" />
                         <h3 className="text-lg font-medium text-gray-900">Comments</h3>
@@ -228,7 +228,7 @@ export default function WorkItem({ user }) {
                 </div>
 
                 {/* Audit Trail Section */}
-                <div className="bg-white shadow sm:rounded-lg border border-gray-200 flex flex-col h-[500px]">
+                <div className="bg-white shadow sm:rounded-lg border border-gray-200 flex flex-col h-125">
                     <div className="px-4 py-3 border-b border-gray-200 bg-gray-50 flex items-center">
                         <Clock className="w-5 h-5 text-gray-500 mr-2" />
                         <h3 className="text-lg font-medium text-gray-900">Audit Trail</h3>
